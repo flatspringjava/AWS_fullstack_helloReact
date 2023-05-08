@@ -8,9 +8,19 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
-<body>
-    <button onclick="alert('executed')">
+<body>    
+    <button>
         click me
-    </button>
+    </button>    
+    <input name="message" placeholder="아무거나 입력해보세요">
+    <script>
+        document.querySelector("button").onclick = function() {
+            alert("default event");
+        }
+        document.querySelector("input[name='message']").onchange = (e) => {
+            console.log(e);
+            console.log(this.value);
+        } 
+    </script>
 </body>
 </html>
