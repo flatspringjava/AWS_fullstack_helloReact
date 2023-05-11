@@ -20,6 +20,7 @@ class LifeCycleSample extends Component {
     }
     return null;
   }
+  
   componentDidMount() {
     console.log("componentDidMount");
   }
